@@ -14,10 +14,9 @@ api = Api(app)
 @app.before_first_request
 def create_tables():
     # Create tables
-    # db.create_all()
+    db.create_all()
     # Load data from Challenge File
-    # load_dataset()
-    pass
+    load_dataset()
 
 # Resources
 api.add_resource(IndicatorFilter, '/filter_country_by_indicator')
